@@ -46,6 +46,7 @@ my @entries = $result->entries;
 my $entr;
 
 my $maxstatcode = 0;
+my $agreements = 0;
 
 foreach $entr ( @entries ) {
        my $servername=$entr->get_value($server);

@@ -36,9 +36,6 @@ if [ $cluster_size -gt $(( $1 / 2 )) ]; then
   exit 1
 fi
 
-echo $cluster_size
-echo $(( $1 / 2 + 1 ))
-
 if [ $cluster_size -le $(( $1 / 2 )) ]; then
   echo "CRITICAL: Cluster size is $cluster_size"
   exit 2

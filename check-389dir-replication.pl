@@ -63,7 +63,7 @@ foreach $entr ( @entries ) {
        $serverstatus =~ s/^Error //;
        $agreements++;
        $statusmessage .= " $servername: $serverlaststart";
-       if ($statuscode!=0)
+       if ($statuscode>1)
        {
            &nagios_return("CRITICAL", "Replication error on ".$agreement.": " . $serverstatus);
        }
